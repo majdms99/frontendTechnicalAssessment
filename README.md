@@ -77,17 +77,20 @@ Use the following credentials to access the dashboard:
 ```
 src/
 ├── app/
-│   ├── (auth)/login/page.tsx     # Login page
+│   ├── (auth)/login/page.tsx     # Login page (Server Component)
 │   ├── (dashboard)/dashboard/    # Protected dashboard
 │   │   ├── page.tsx              # Dashboard main page
 │   │   └── layout.tsx            # Dashboard layout
 │   ├── middleware.ts             # Route protection middleware
-│   ├── layout.tsx                # Root layout
+│   ├── layout.tsx                # Root layout with fonts
 │   └── page.tsx                  # Home page (redirect)
 ├── components/
+│   ├── auth/                     # Authentication components
+│   │   ├── LoginCard.tsx         # Login card with animations (Client Component)
+│   │   └── LoginForm.tsx         # Login form with validation (Client Component)
 │   ├── layout/                   # Layout components
-│   │   ├── Navbar.tsx            # Top navigation bar
-│   │   └── Sidebar.tsx           # Sidebar navigation
+│   │   ├── Navbar.tsx            # Top navigation bar with dark mode
+│   │   └── Sidebar.tsx           # Sidebar navigation with mobile menu
 │   ├── ui/                       # Shadcn UI components
 │   │   ├── button.tsx
 │   │   ├── card.tsx
@@ -97,12 +100,12 @@ src/
 │       └── StatsCard.tsx         # Statistics card component
 ├── lib/
 │   ├── actions/
-│   │   └── auth.ts               # Server actions for auth
+│   │   └── auth.ts               # Server actions for authentication
 │   ├── validations/
 │   │   └── auth.ts               # Form validation schemas
 │   └── utils.ts                  # Utility functions
 └── styles/
-    └── globals.css               # Global styles
+    └── globals.css               # Global styles with typography
 ```
 
 ## 🎯 Key Features
